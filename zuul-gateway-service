@@ -2,8 +2,8 @@ spring.application.name = zuul-gateway-service
 server.port = 8765
 zuul.retryable = true
 zuul.prefix= /api
-zuul.routes.hi.url = demo-hi-service
-zuul.routes.hello.url = demo-hello-service
-zuul.routes.bye.url = demo-bye-service
+zuul.routes.hi.url = http://10.151.61.152:8080/demo-hi-service/
+zuul.routes.hello.url = http://10.151.61.152:8080/demo-hello-service/
+zuul.routes.bye.url = http://10.151.61.152:8080/demo-bye-service/
 eureka.client.service-url.default-zone = http://10.151.61.152:8761/eureka
 
