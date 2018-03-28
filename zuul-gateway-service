@@ -1,0 +1,12 @@
+spring.application.name = zuul-gateway-service
+server.port = 8765
+zuul.retryable = true
+zuul.prefix= /api
+zuul.routes.hi-path = /hi/**
+zuul.routes.hi-serviceId = demo-hi-service
+zuul.routes.hello-path = /hello/**
+zuul.routes.hello-serviceId = demo-hello-service
+zuul.routes.bye-path = /bye/**
+zuul.routes.bye-serviceId = demo-bye-service
+eureka.client.service-url.default-zone = http://10.151.61.152:8761/eureka
+
