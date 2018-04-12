@@ -9,3 +9,5 @@ eureka.client.service-url.default-zone = http://10.151.61.152:8761/eureka
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000
 ribbon.ConnectTimeout=3000
 ribbon.ReadTimeout=60000
+
+Authorities={\"roles\":\"Customer,Vendor\",\"Customer\":\"carry-bag-database-service,feedback-database-service,offer-database-service,subscribe-database-service,user-database-service,vendor-service,wishlist-database-service\",\"Vendor\":\"feedback-database-service,offer-database-service,user-database-service\"}
