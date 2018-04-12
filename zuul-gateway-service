@@ -1,5 +1,12 @@
 spring.application.name = zuul-gateway-service
 server.port = 8765
+
+Authorities={\"roles\":\"User,Customer,Vendor\",\"Customer\":\"carry-bag-database-service,feedback-database-service,offer-database-service,subscribe-database-service,user-database-service,vendor-service,wishlist-database-service\",\"Vendor\":\"feedback-database-service,offer-database-service,user-database-service\",\"User\":\"search-service\"}
+
+loginService=registration-and-log-in-service
+
+publicUser=User
+
 zuul.retryable = true
 zuul.prefix= /api
 zuul.routes.hi.url = http://10.151.61.152:8080/demo-hi-service/
@@ -9,10 +16,4 @@ eureka.client.service-url.default-zone = http://10.151.61.152:8761/eureka
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=5000
 ribbon.ConnectTimeout=3000
 ribbon.ReadTimeout=60000
-
-Authorities={\"roles\":\"Customer,Vendor\",\"Customer\":\"carry-bag-database-service,feedback-database-service,offer-database-service,subscribe-database-service,user-database-service,vendor-service,wishlist-database-service\",\"Vendor\":\"feedback-database-service,offer-database-service,user-database-service\"}
-
-loginService=registration-and-log-in-service
-
-publicUser=Customer
 
